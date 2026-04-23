@@ -1,5 +1,47 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BasicButtonOrLinkList extends Struct.ComponentSchema {
+  collectionName: 'components_basic_button_or_link_lists';
+  info: {
+    displayName: 'Button or link list';
+    icon: 'bulletList';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'prova.button', true>;
+  };
+}
+
+export interface BasicLogoBrand extends Struct.ComponentSchema {
+  collectionName: 'components_basic_logo_brands';
+  info: {
+    displayName: 'Logo-brand';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    brand: Schema.Attribute.Component<'basic.text', false>;
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface BasicText extends Struct.ComponentSchema {
+  collectionName: 'components_basic_texts';
+  info: {
+    displayName: 'Text';
+    icon: 'alien';
+  };
+  attributes: {
+    Color: Schema.Attribute.Enumeration<
+      ['primary', 'secondary', 'tertiary', 'light', 'dark']
+    >;
+    Content: Schema.Attribute.Text;
+    HTMLTag: Schema.Attribute.Enumeration<
+      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']
+    >;
+    String: Schema.Attribute.String;
+    styleTag: Schema.Attribute.Enumeration<['b', 'i', 'u', 'strong']>;
+  };
+}
+
 export interface ProvaButton extends Struct.ComponentSchema {
   collectionName: 'components_prova_buttons';
   info: {
@@ -29,9 +71,9 @@ export interface ProvaCategoryOverview extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    catBlurb: Schema.Attribute.Text & Schema.Attribute.Required;
+    catBlurb: Schema.Attribute.Component<'basic.text', false>;
     categoryLink: Schema.Attribute.Component<'prova.button', false>;
-    catTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    catTitle: Schema.Attribute.Component<'basic.text', false>;
   };
 }
 
@@ -165,6 +207,9 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'basic.button-or-link-list': BasicButtonOrLinkList;
+      'basic.logo-brand': BasicLogoBrand;
+      'basic.text': BasicText;
       'prova.button': ProvaButton;
       'prova.category-overview': ProvaCategoryOverview;
       'prova.hero-img': ProvaHeroImg;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_button_or_link_lists",
+  "info": {
+    "displayName": "Button or link list",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "prova.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

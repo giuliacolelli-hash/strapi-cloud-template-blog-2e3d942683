@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_basic_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "String": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "HTMLTag": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "p"
+      ]
+    },
+    "styleTag": {
+      "type": "enumeration",
+      "enum": [
+        "b",
+        "i",
+        "u",
+        "strong"
+      ]
+    },
+    "Color": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "light",
+        "dark"
+      ]
+    }
+  },
+  "config": {}
+}

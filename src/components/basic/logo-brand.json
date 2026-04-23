@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_basic_logo_brands",
+  "info": {
+    "displayName": "Logo-brand",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "brand": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

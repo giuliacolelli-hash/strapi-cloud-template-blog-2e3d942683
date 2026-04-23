@@ -7,12 +7,14 @@
   "options": {},
   "attributes": {
     "catTitle": {
-      "type": "string",
-      "required": true
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
     },
     "catBlurb": {
-      "type": "text",
-      "required": true
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
     },
     "categoryLink": {
       "type": "component",
