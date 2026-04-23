@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "projects_pages",
+  "collectionName": "footers",
   "info": {
-    "singularName": "project-page",
-    "pluralName": "projects-pages",
-    "displayName": "Projects"
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
   },
   "options": {
     "draftAndPublish": true
@@ -15,44 +15,33 @@
     }
   },
   "attributes": {
-    "title": {
+    "copyright": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
-    "hero": {
+    "toTop": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "templates.hero-section",
+      "component": "basic.link-button",
       "repeatable": false
     },
-    "categOverw": {
+    "links": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "templates.text-boxes",
+      "component": "core.link-button-list",
       "repeatable": false
-    },
-    "progByCateg": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "templates.wnd-ws",
-      "repeatable": true
     }
   }
 }
