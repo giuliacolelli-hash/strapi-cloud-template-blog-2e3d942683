@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_templates_hero_sections",
+  "info": {
+    "displayName": "Hero section",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "heroImg": {
+      "type": "component",
+      "component": "basic.hero-img",
+      "repeatable": false
+    },
+    "title": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "subtitle": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

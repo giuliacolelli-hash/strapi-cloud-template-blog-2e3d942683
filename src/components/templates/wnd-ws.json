@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_templates_wnd_ws",
+  "info": {
+    "displayName": "WNDWs",
+    "icon": "refresh"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "subtitle": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "wndws": {
+      "type": "component",
+      "component": "core.wnd-wproj",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

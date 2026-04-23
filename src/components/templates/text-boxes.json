@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_templates_text_boxes",
+  "info": {
+    "displayName": "Text boxes",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "subtitle": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "textboxes": {
+      "type": "component",
+      "component": "core.simple-text-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

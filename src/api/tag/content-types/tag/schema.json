@@ -15,14 +15,13 @@
     }
   },
   "attributes": {
-    "nome": {
+    "name": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     }
   }
 }

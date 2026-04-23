@@ -218,6 +218,90 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface TemplatesBasicContainer extends Struct.ComponentSchema {
+  collectionName: 'components_templates_basic_containers';
+  info: {
+    displayName: 'Basic container';
+    icon: 'filter';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'basic.text', true>;
+    gallery: Schema.Attribute.Component<'basic.media-gallery', false>;
+    img: Schema.Attribute.Component<'basic.single-img', true>;
+    link: Schema.Attribute.Component<'basic.link-button', true>;
+    linklist: Schema.Attribute.Component<'core.link-button-list', false>;
+    subtitle: Schema.Attribute.Component<'basic.text', false>;
+    title: Schema.Attribute.Component<'basic.text', false>;
+  };
+}
+
+export interface TemplatesFormSection extends Struct.ComponentSchema {
+  collectionName: 'components_templates_form_sections';
+  info: {
+    displayName: 'Form section';
+    icon: 'collapse';
+  };
+  attributes: {
+    form: Schema.Attribute.Component<'core.form', false>;
+    img: Schema.Attribute.Component<'basic.single-img', true>;
+    subtitle: Schema.Attribute.Component<'basic.text', false>;
+    title: Schema.Attribute.Component<'basic.text', false>;
+  };
+}
+
+export interface TemplatesHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_templates_hero_sections';
+  info: {
+    displayName: 'Hero section';
+    icon: 'alien';
+  };
+  attributes: {
+    heroImg: Schema.Attribute.Component<'basic.hero-img', false>;
+    subtitle: Schema.Attribute.Component<'basic.text', false>;
+    title: Schema.Attribute.Component<'basic.text', false>;
+  };
+}
+
+export interface TemplatesProjectOverview extends Struct.ComponentSchema {
+  collectionName: 'components_templates_project_overviews';
+  info: {
+    displayName: 'Project overview';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    tools: Schema.Attribute.Component<'basic.text', false>;
+    year: Schema.Attribute.Component<'basic.text', false>;
+  };
+}
+
+export interface TemplatesTextBoxes extends Struct.ComponentSchema {
+  collectionName: 'components_templates_text_boxes';
+  info: {
+    displayName: 'Text boxes';
+    icon: 'book';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.Component<'basic.text', false>;
+    textboxes: Schema.Attribute.Component<'core.simple-text-box', true>;
+    title: Schema.Attribute.Component<'basic.text', false>;
+  };
+}
+
+export interface TemplatesWndWs extends Struct.ComponentSchema {
+  collectionName: 'components_templates_wnd_ws';
+  info: {
+    displayName: 'WNDWs';
+    icon: 'refresh';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.Component<'basic.text', false>;
+    title: Schema.Attribute.Component<'basic.text', false>;
+    wndws: Schema.Attribute.Component<'core.wnd-wproj', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -238,6 +322,12 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'templates.basic-container': TemplatesBasicContainer;
+      'templates.form-section': TemplatesFormSection;
+      'templates.hero-section': TemplatesHeroSection;
+      'templates.project-overview': TemplatesProjectOverview;
+      'templates.text-boxes': TemplatesTextBoxes;
+      'templates.wnd-ws': TemplatesWndWs;
     }
   }
 }

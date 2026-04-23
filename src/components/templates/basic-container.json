@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_templates_basic_containers",
+  "info": {
+    "displayName": "Basic container",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "subtitle": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "img": {
+      "type": "component",
+      "component": "basic.single-img",
+      "repeatable": true
+    },
+    "content": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": true
+    },
+    "gallery": {
+      "type": "component",
+      "component": "basic.media-gallery",
+      "repeatable": false
+    },
+    "linklist": {
+      "type": "component",
+      "component": "core.link-button-list",
+      "repeatable": false
+    },
+    "link": {
+      "type": "component",
+      "component": "basic.link-button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
