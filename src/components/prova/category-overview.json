@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_prova_category_overviews",
+  "info": {
+    "displayName": "Category overview",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "catTitle": {
+      "type": "string",
+      "required": true
+    },
+    "catBlurb": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

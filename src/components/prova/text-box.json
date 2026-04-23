@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_prova_text_boxes",
+  "info": {
+    "displayName": "Text box",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "shortTitle": {
+      "type": "string",
+      "required": true
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  },
+  "config": {}
+}

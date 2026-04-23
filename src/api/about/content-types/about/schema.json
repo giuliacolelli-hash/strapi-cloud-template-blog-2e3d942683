@@ -15,9 +15,36 @@
     "title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "heroImg": {
+      "type": "component",
+      "component": "prova.hero-img",
+      "repeatable": false
+    },
+    "sect1title": {
+      "type": "string"
+    },
+    "content1": {
+      "type": "component",
+      "component": "prova.text-box",
+      "repeatable": true
+    },
+    "sect2title": {
+      "type": "string"
+    },
+    "content2": {
+      "type": "component",
+      "component": "prova.text-box",
+      "repeatable": true
+    },
+    "decoimgs": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
