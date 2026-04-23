@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_prova_list_projects",
+  "info": {
+    "displayName": "List project"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  },
+  "config": {}
+}

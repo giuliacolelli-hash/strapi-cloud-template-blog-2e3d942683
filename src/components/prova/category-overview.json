@@ -13,6 +13,11 @@
     "catBlurb": {
       "type": "text",
       "required": true
+    },
+    "categoryLink": {
+      "type": "component",
+      "component": "prova.button",
+      "repeatable": false
     }
   },
   "config": {}

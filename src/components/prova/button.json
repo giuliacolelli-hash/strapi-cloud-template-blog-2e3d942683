@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_prova_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "filled",
+      "enum": [
+        "link",
+        "filled",
+        "outline"
+      ]
+    },
+    "Color": {
+      "type": "enumeration",
+      "required": true,
+      "default": "primary",
+      "enum": [
+        "primary",
+        "secondary",
+        "dark",
+        "light"
+      ]
+    },
+    "Size": {
+      "type": "enumeration",
+      "required": true,
+      "default": "default",
+      "enum": [
+        "default",
+        "small",
+        "large"
+      ]
+    },
+    "URL": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,5 +1,27 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ProvaButton extends Struct.ComponentSchema {
+  collectionName: 'components_prova_buttons';
+  info: {
+    displayName: 'Button';
+  };
+  attributes: {
+    Color: Schema.Attribute.Enumeration<
+      ['primary', 'secondary', 'dark', 'light']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'primary'>;
+    Size: Schema.Attribute.Enumeration<['default', 'small', 'large']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+    Text: Schema.Attribute.String & Schema.Attribute.Required;
+    Type: Schema.Attribute.Enumeration<['link', 'filled', 'outline']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'filled'>;
+    URL: Schema.Attribute.String;
+  };
+}
+
 export interface ProvaCategoryOverview extends Struct.ComponentSchema {
   collectionName: 'components_prova_category_overviews';
   info: {
@@ -8,6 +30,7 @@ export interface ProvaCategoryOverview extends Struct.ComponentSchema {
   };
   attributes: {
     catBlurb: Schema.Attribute.Text & Schema.Attribute.Required;
+    categoryLink: Schema.Attribute.Component<'prova.button', false>;
     catTitle: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -20,6 +43,16 @@ export interface ProvaHeroImg extends Struct.ComponentSchema {
   };
   attributes: {
     heroimg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface ProvaListProject extends Struct.ComponentSchema {
+  collectionName: 'components_prova_list_projects';
+  info: {
+    displayName: 'List project';
+  };
+  attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
   };
 }
 
@@ -44,7 +77,10 @@ export interface ProvaProjectOverview extends Struct.ComponentSchema {
     icon: 'play';
   };
   attributes: {
+    categoryLink: Schema.Attribute.Component<'prova.button', false>;
     projBlurb: Schema.Attribute.Text & Schema.Attribute.Required;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+    projectLink: Schema.Attribute.Component<'prova.button', false>;
     projImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     projTitle: Schema.Attribute.String & Schema.Attribute.Required;
@@ -129,8 +165,10 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'prova.button': ProvaButton;
       'prova.category-overview': ProvaCategoryOverview;
       'prova.hero-img': ProvaHeroImg;
+      'prova.list-project': ProvaListProject;
       'prova.media-gallery': ProvaMediaGallery;
       'prova.project-overview': ProvaProjectOverview;
       'prova.text-box': ProvaTextBox;

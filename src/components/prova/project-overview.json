@@ -24,6 +24,21 @@
         "videos",
         "audios"
       ]
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "categoryLink": {
+      "type": "component",
+      "component": "prova.button",
+      "repeatable": false
+    },
+    "projectLink": {
+      "type": "component",
+      "component": "prova.button",
+      "repeatable": false
     }
   },
   "config": {}
