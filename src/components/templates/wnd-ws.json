@@ -20,6 +20,11 @@
       "type": "component",
       "component": "core.wnd-wproj",
       "repeatable": true
+    },
+    "CTA": {
+      "type": "component",
+      "component": "basic.link-button",
+      "repeatable": false
     }
   },
   "config": {}

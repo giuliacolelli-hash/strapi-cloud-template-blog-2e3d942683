@@ -186,9 +186,7 @@ export interface SharedRichText extends Struct.ComponentSchema {
     displayName: 'Rich text';
     icon: 'align-justify';
   };
-  attributes: {
-    body: Schema.Attribute.RichText;
-  };
+  attributes: {};
 }
 
 export interface SharedSeo extends Struct.ComponentSchema {
@@ -226,9 +224,9 @@ export interface TemplatesBasicContainer extends Struct.ComponentSchema {
   };
   attributes: {
     content: Schema.Attribute.Component<'basic.text', true>;
+    CTA: Schema.Attribute.Component<'basic.link-button', true>;
     gallery: Schema.Attribute.Component<'basic.media-gallery', false>;
     img: Schema.Attribute.Component<'basic.single-img', true>;
-    link: Schema.Attribute.Component<'basic.link-button', true>;
     linklist: Schema.Attribute.Component<'core.link-button-list', false>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     title: Schema.Attribute.Component<'basic.text', false>;
@@ -269,8 +267,7 @@ export interface TemplatesProjectOverview extends Struct.ComponentSchema {
     icon: 'arrowUp';
   };
   attributes: {
-    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
-    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    projBlurb: Schema.Attribute.Component<'basic.text', false>;
     tools: Schema.Attribute.Component<'basic.text', false>;
     year: Schema.Attribute.Component<'basic.text', false>;
   };
@@ -296,6 +293,7 @@ export interface TemplatesWndWs extends Struct.ComponentSchema {
     icon: 'refresh';
   };
   attributes: {
+    CTA: Schema.Attribute.Component<'basic.link-button', false>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     title: Schema.Attribute.Component<'basic.text', false>;
     wndws: Schema.Attribute.Component<'core.wnd-wproj', true>;

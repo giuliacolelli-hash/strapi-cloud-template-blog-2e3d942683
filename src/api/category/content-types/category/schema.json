@@ -18,8 +18,10 @@
     "slug": {
       "type": "uid"
     },
-    "description": {
-      "type": "text"
+    "hero": {
+      "type": "component",
+      "component": "templates.hero-section",
+      "repeatable": false
     },
     "articles": {
       "type": "relation",
@@ -32,6 +34,16 @@
       "relation": "oneToOne",
       "target": "api::project.project",
       "inversedBy": "category"
+    },
+    "description": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "projects": {
+      "type": "component",
+      "component": "core.project-list",
+      "repeatable": false
     }
   }
 }

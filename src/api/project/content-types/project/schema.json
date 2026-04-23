@@ -45,33 +45,35 @@
       "target": "api::category.category",
       "mappedBy": "project"
     },
-    "year": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "tools": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "details": {
-      "type": "dynamiczone",
+    "projOverview": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "components": [
-        "shared.rich-text",
-        "shared.media"
-      ]
+      "component": "templates.project-overview",
+      "repeatable": false
+    },
+    "projDetails": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "templates.basic-container",
+      "repeatable": true
+    },
+    "Navigation": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.link-button",
+      "repeatable": true
     }
   }
 }

@@ -6,22 +6,17 @@
   },
   "options": {},
   "attributes": {
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
-    },
     "year": {
       "type": "component",
       "component": "basic.text",
       "repeatable": false
     },
     "tools": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "projBlurb": {
       "type": "component",
       "component": "basic.text",
       "repeatable": false

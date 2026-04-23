@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "front_pages",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "front-page",
-    "pluralName": "front-pages",
-    "displayName": "Front Page"
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contacts"
   },
   "options": {
     "draftAndPublish": true
@@ -25,27 +25,17 @@
       "component": "templates.hero-section",
       "repeatable": false
     },
-    "introAbout": {
+    "formSection": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "templates.basic-container",
+      "component": "templates.form-section",
       "repeatable": false
     },
-    "introProj": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "templates.wnd-ws",
-      "repeatable": false
-    },
-    "contacts": {
+    "moreLinks": {
       "type": "component",
       "pluginOptions": {
         "i18n": {

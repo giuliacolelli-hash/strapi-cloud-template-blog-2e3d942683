@@ -12,24 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
+    "hero": {
+      "type": "component",
+      "component": "templates.hero-section",
+      "repeatable": false
     },
-    "sect1title": {
-      "type": "string"
+    "bioNedu": {
+      "type": "component",
+      "component": "templates.text-boxes",
+      "repeatable": false
     },
-    "sect2title": {
-      "type": "string"
-    },
-    "decoimgs": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "skills": {
+      "type": "component",
+      "component": "templates.text-boxes",
+      "repeatable": false
     }
   }
 }
