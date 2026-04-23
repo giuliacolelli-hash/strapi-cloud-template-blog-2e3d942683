@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_prova_hero_imgs",
+  "collectionName": "components_basic_hero_imgs",
   "info": {
     "displayName": "Hero Img",
-    "icon": "picture"
+    "icon": "expand"
   },
   "options": {},
   "attributes": {

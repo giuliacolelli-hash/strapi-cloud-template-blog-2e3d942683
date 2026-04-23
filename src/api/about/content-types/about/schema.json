@@ -15,11 +15,6 @@
     "title": {
       "type": "string"
     },
-    "heroImg": {
-      "type": "component",
-      "component": "prova.hero-img",
-      "repeatable": false
-    },
     "sect1title": {
       "type": "string"
     },

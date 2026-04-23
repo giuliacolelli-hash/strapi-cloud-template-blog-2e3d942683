@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_basic_media_galleries",
+  "info": {
+    "displayName": "Media gallery",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "captions": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

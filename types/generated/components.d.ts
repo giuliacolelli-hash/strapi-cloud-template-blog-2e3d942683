@@ -6,8 +6,45 @@ export interface BasicButtonOrLinkList extends Struct.ComponentSchema {
     displayName: 'Button or link list';
     icon: 'bulletList';
   };
+  attributes: {};
+}
+
+export interface BasicFormField extends Struct.ComponentSchema {
+  collectionName: 'components_basic_form_fields';
+  info: {
+    displayName: 'Form field';
+    icon: 'layer';
+  };
   attributes: {
-    links: Schema.Attribute.Component<'prova.button', true>;
+    label: Schema.Attribute.Component<'basic.text', false>;
+  };
+}
+
+export interface BasicHeroImg extends Struct.ComponentSchema {
+  collectionName: 'components_basic_hero_imgs';
+  info: {
+    displayName: 'Hero Img';
+    icon: 'expand';
+  };
+  attributes: {
+    heroimg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface BasicLinkButton extends Struct.ComponentSchema {
+  collectionName: 'components_basic_link_buttons';
+  info: {
+    displayName: 'Link/button';
+    icon: 'link';
+  };
+  attributes: {
+    color: Schema.Attribute.Enumeration<
+      ['primary', 'secondary', 'dark', 'light']
+    >;
+    size: Schema.Attribute.Enumeration<['default', 'small', 'large']>;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['link', 'filled', 'outline']>;
+    URL: Schema.Attribute.String;
   };
 }
 
@@ -20,6 +57,29 @@ export interface BasicLogoBrand extends Struct.ComponentSchema {
   attributes: {
     brand: Schema.Attribute.Component<'basic.text', false>;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface BasicMediaGallery extends Struct.ComponentSchema {
+  collectionName: 'components_basic_media_galleries';
+  info: {
+    displayName: 'Media gallery';
+    icon: 'apps';
+  };
+  attributes: {
+    captions: Schema.Attribute.Component<'basic.text', true>;
+    images: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface BasicSingleImg extends Struct.ComponentSchema {
+  collectionName: 'components_basic_single_imgs';
+  info: {
+    displayName: 'Single img';
+    icon: 'gate';
+  };
+  attributes: {
+    singleIMG: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -42,28 +102,6 @@ export interface BasicText extends Struct.ComponentSchema {
   };
 }
 
-export interface ProvaButton extends Struct.ComponentSchema {
-  collectionName: 'components_prova_buttons';
-  info: {
-    displayName: 'Button';
-  };
-  attributes: {
-    Color: Schema.Attribute.Enumeration<
-      ['primary', 'secondary', 'dark', 'light']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'primary'>;
-    Size: Schema.Attribute.Enumeration<['default', 'small', 'large']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'default'>;
-    Text: Schema.Attribute.String & Schema.Attribute.Required;
-    Type: Schema.Attribute.Enumeration<['link', 'filled', 'outline']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'filled'>;
-    URL: Schema.Attribute.String;
-  };
-}
-
 export interface ProvaCategoryOverview extends Struct.ComponentSchema {
   collectionName: 'components_prova_category_overviews';
   info: {
@@ -72,19 +110,7 @@ export interface ProvaCategoryOverview extends Struct.ComponentSchema {
   };
   attributes: {
     catBlurb: Schema.Attribute.Component<'basic.text', false>;
-    categoryLink: Schema.Attribute.Component<'prova.button', false>;
     catTitle: Schema.Attribute.Component<'basic.text', false>;
-  };
-}
-
-export interface ProvaHeroImg extends Struct.ComponentSchema {
-  collectionName: 'components_prova_hero_imgs';
-  info: {
-    displayName: 'Hero Img';
-    icon: 'picture';
-  };
-  attributes: {
-    heroimg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -98,20 +124,6 @@ export interface ProvaListProject extends Struct.ComponentSchema {
   };
 }
 
-export interface ProvaMediaGallery extends Struct.ComponentSchema {
-  collectionName: 'components_prova_media_galleries';
-  info: {
-    displayName: 'Media gallery';
-    icon: 'dashboard';
-  };
-  attributes: {
-    files: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-  };
-}
-
 export interface ProvaProjectOverview extends Struct.ComponentSchema {
   collectionName: 'components_prova_project_overviews';
   info: {
@@ -119,10 +131,8 @@ export interface ProvaProjectOverview extends Struct.ComponentSchema {
     icon: 'play';
   };
   attributes: {
-    categoryLink: Schema.Attribute.Component<'prova.button', false>;
     projBlurb: Schema.Attribute.Text & Schema.Attribute.Required;
     project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
-    projectLink: Schema.Attribute.Component<'prova.button', false>;
     projImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     projTitle: Schema.Attribute.String & Schema.Attribute.Required;
@@ -208,13 +218,15 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'basic.button-or-link-list': BasicButtonOrLinkList;
+      'basic.form-field': BasicFormField;
+      'basic.hero-img': BasicHeroImg;
+      'basic.link-button': BasicLinkButton;
       'basic.logo-brand': BasicLogoBrand;
+      'basic.media-gallery': BasicMediaGallery;
+      'basic.single-img': BasicSingleImg;
       'basic.text': BasicText;
-      'prova.button': ProvaButton;
       'prova.category-overview': ProvaCategoryOverview;
-      'prova.hero-img': ProvaHeroImg;
       'prova.list-project': ProvaListProject;
-      'prova.media-gallery': ProvaMediaGallery;
       'prova.project-overview': ProvaProjectOverview;
       'prova.text-box': ProvaTextBox;
       'shared.media': SharedMedia;

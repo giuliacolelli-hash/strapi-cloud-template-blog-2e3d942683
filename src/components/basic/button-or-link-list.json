@@ -5,12 +5,6 @@
     "icon": "bulletList"
   },
   "options": {},
-  "attributes": {
-    "links": {
-      "type": "component",
-      "component": "prova.button",
-      "repeatable": true
-    }
-  },
+  "attributes": {},
   "config": {}
 }

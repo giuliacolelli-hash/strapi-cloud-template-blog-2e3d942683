@@ -80,8 +80,7 @@
       },
       "components": [
         "shared.rich-text",
-        "shared.media",
-        "prova.media-gallery"
+        "shared.media"
       ]
     }
   }

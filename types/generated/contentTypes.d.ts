@@ -451,7 +451,6 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    heroImg: Schema.Attribute.Component<'prova.hero-img', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
@@ -589,12 +588,6 @@ export interface ApiFrontPageFrontPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heroImg: Schema.Attribute.Component<'prova.hero-img', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -717,12 +710,6 @@ export interface ApiProjectPageProjectPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heroImg: Schema.Attribute.Component<'prova.hero-img', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -787,7 +774,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     details: Schema.Attribute.DynamicZone<
-      ['shared.rich-text', 'shared.media', 'prova.media-gallery']
+      ['shared.rich-text', 'shared.media']
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

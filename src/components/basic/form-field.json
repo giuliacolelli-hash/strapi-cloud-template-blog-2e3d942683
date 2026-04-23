@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_form_fields",
+  "info": {
+    "displayName": "Form field",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

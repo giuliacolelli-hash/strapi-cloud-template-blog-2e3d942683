@@ -24,16 +24,6 @@
       },
       "required": true
     },
-    "heroImg": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "prova.hero-img",
-      "repeatable": false
-    },
     "section1": {
       "type": "string",
       "pluginOptions": {

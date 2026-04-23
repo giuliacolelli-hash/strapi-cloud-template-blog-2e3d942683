@@ -1,28 +1,25 @@
 {
-  "collectionName": "components_prova_buttons",
+  "collectionName": "components_basic_link_buttons",
   "info": {
-    "displayName": "Button"
+    "displayName": "Link/button",
+    "icon": "link"
   },
   "options": {},
   "attributes": {
-    "Text": {
+    "text": {
       "type": "string",
       "required": true
     },
-    "Type": {
+    "type": {
       "type": "enumeration",
-      "required": true,
-      "default": "filled",
       "enum": [
         "link",
         "filled",
         "outline"
       ]
     },
-    "Color": {
+    "color": {
       "type": "enumeration",
-      "required": true,
-      "default": "primary",
       "enum": [
         "primary",
         "secondary",
@@ -30,10 +27,8 @@
         "light"
       ]
     },
-    "Size": {
+    "size": {
       "type": "enumeration",
-      "required": true,
-      "default": "default",
       "enum": [
         "default",
         "small",

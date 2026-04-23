@@ -15,11 +15,6 @@
       "type": "component",
       "component": "basic.text",
       "repeatable": false
-    },
-    "categoryLink": {
-      "type": "component",
-      "component": "prova.button",
-      "repeatable": false
     }
   },
   "config": {}

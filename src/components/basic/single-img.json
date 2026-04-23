@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_basic_single_imgs",
+  "info": {
+    "displayName": "Single img",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "singleIMG": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
