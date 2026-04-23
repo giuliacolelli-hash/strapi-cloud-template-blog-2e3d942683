@@ -442,8 +442,6 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    content1: Schema.Attribute.Component<'prova.text-box', true>;
-    content2: Schema.Attribute.Component<'prova.text-box', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -603,7 +601,7 @@ export interface ApiFrontPageFrontPage extends Struct.SingleTypeSchema {
         };
       }>;
     sectcontent2: Schema.Attribute.DynamicZone<
-      ['shared.rich-text', 'shared.media', 'prova.project-overview']
+      ['shared.rich-text', 'shared.media']
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -683,30 +681,6 @@ export interface ApiProjectPageProjectPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    cat1projects: Schema.Attribute.Component<'prova.project-overview', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    cat2projects: Schema.Attribute.Component<'prova.project-overview', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    cat3projects: Schema.Attribute.Component<'prova.project-overview', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    categories: Schema.Attribute.Component<'prova.category-overview', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -786,12 +760,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::project.project'
     >;
-    overview: Schema.Attribute.Component<'prova.project-overview', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> &
       Schema.Attribute.Required &

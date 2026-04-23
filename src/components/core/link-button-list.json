@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_core_link_button_lists",
+  "info": {
+    "displayName": "Link/button list",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "basic.link-button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -32,16 +32,6 @@
         }
       }
     },
-    "categories": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "prova.category-overview",
-      "repeatable": true
-    },
     "sectCat1": {
       "type": "string",
       "pluginOptions": {
@@ -49,16 +39,6 @@
           "localized": true
         }
       }
-    },
-    "cat1projects": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "prova.project-overview",
-      "repeatable": true
     },
     "sectCat2": {
       "type": "string",
@@ -68,16 +48,6 @@
         }
       }
     },
-    "cat2projects": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "prova.project-overview",
-      "repeatable": true
-    },
     "sectCat3": {
       "type": "string",
       "pluginOptions": {
@@ -85,16 +55,6 @@
           "localized": true
         }
       }
-    },
-    "cat3projects": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "prova.project-overview",
-      "repeatable": true
     }
   }
 }

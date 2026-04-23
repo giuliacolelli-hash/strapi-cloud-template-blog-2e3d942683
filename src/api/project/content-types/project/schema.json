@@ -24,16 +24,6 @@
       },
       "required": true
     },
-    "overview": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "prova.project-overview",
-      "repeatable": false
-    },
     "slug": {
       "type": "uid",
       "pluginOptions": {

@@ -12,6 +12,9 @@
     "Content": {
       "type": "text"
     },
+    "rtfcontent": {
+      "type": "richtext"
+    },
     "HTMLTag": {
       "type": "enumeration",
       "enum": [

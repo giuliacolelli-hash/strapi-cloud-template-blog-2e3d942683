@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_core_forms",
+  "info": {
+    "displayName": "Form",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "formField": {
+      "type": "component",
+      "component": "basic.form-field",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

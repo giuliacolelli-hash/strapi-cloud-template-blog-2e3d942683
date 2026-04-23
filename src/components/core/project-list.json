@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_prova_list_projects",
+  "collectionName": "components_core_project_lists",
   "info": {
-    "displayName": "List project"
+    "displayName": "Project List",
+    "icon": "check"
   },
   "options": {},
   "attributes": {

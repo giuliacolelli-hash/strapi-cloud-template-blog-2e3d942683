@@ -61,8 +61,7 @@
       },
       "components": [
         "shared.rich-text",
-        "shared.media",
-        "prova.project-overview"
+        "shared.media"
       ]
     }
   }

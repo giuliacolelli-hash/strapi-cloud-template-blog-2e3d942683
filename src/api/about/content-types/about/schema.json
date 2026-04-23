@@ -18,18 +18,8 @@
     "sect1title": {
       "type": "string"
     },
-    "content1": {
-      "type": "component",
-      "component": "prova.text-box",
-      "repeatable": true
-    },
     "sect2title": {
       "type": "string"
-    },
-    "content2": {
-      "type": "component",
-      "component": "prova.text-box",
-      "repeatable": true
     },
     "decoimgs": {
       "type": "media",

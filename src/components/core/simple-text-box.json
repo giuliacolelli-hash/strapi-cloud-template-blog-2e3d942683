@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_core_simple_text_boxes",
+  "info": {
+    "displayName": "Simple text box",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "shortTitle": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "content": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "img": {
+      "type": "component",
+      "component": "basic.single-img",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

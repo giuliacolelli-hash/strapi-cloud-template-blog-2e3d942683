@@ -12,6 +12,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "caption": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
     }
   },
   "config": {}

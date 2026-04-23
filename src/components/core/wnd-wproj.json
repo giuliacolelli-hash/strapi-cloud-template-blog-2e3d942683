@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_core_wnd_wprojs",
+  "info": {
+    "displayName": "WNDWproj",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "handletxt": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "img": {
+      "type": "component",
+      "component": "basic.single-img",
+      "repeatable": false
+    },
+    "title": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "blurb": {
+      "type": "component",
+      "component": "basic.text",
+      "repeatable": false
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    }
+  },
+  "config": {}
+}

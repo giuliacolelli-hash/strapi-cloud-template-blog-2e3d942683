@@ -1,14 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BasicButtonOrLinkList extends Struct.ComponentSchema {
-  collectionName: 'components_basic_button_or_link_lists';
-  info: {
-    displayName: 'Button or link list';
-    icon: 'bulletList';
-  };
-  attributes: {};
-}
-
 export interface BasicFormField extends Struct.ComponentSchema {
   collectionName: 'components_basic_form_fields';
   info: {
@@ -79,6 +70,7 @@ export interface BasicSingleImg extends Struct.ComponentSchema {
     icon: 'gate';
   };
   attributes: {
+    caption: Schema.Attribute.Component<'basic.text', false>;
     singleIMG: Schema.Attribute.Media<'images'>;
   };
 }
@@ -97,58 +89,70 @@ export interface BasicText extends Struct.ComponentSchema {
     HTMLTag: Schema.Attribute.Enumeration<
       ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']
     >;
+    rtfcontent: Schema.Attribute.RichText;
     String: Schema.Attribute.String;
     styleTag: Schema.Attribute.Enumeration<['b', 'i', 'u', 'strong']>;
   };
 }
 
-export interface ProvaCategoryOverview extends Struct.ComponentSchema {
-  collectionName: 'components_prova_category_overviews';
+export interface CoreForm extends Struct.ComponentSchema {
+  collectionName: 'components_core_forms';
   info: {
-    displayName: 'Category overview';
+    displayName: 'Form';
     icon: 'bulletList';
   };
   attributes: {
-    catBlurb: Schema.Attribute.Component<'basic.text', false>;
-    catTitle: Schema.Attribute.Component<'basic.text', false>;
+    formField: Schema.Attribute.Component<'basic.form-field', true>;
   };
 }
 
-export interface ProvaListProject extends Struct.ComponentSchema {
-  collectionName: 'components_prova_list_projects';
+export interface CoreLinkButtonList extends Struct.ComponentSchema {
+  collectionName: 'components_core_link_button_lists';
   info: {
-    displayName: 'List project';
+    displayName: 'Link/button list';
+    icon: 'bulletList';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'basic.link-button', true>;
+  };
+}
+
+export interface CoreProjectList extends Struct.ComponentSchema {
+  collectionName: 'components_core_project_lists';
+  info: {
+    displayName: 'Project List';
+    icon: 'check';
   };
   attributes: {
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
   };
 }
 
-export interface ProvaProjectOverview extends Struct.ComponentSchema {
-  collectionName: 'components_prova_project_overviews';
+export interface CoreSimpleTextBox extends Struct.ComponentSchema {
+  collectionName: 'components_core_simple_text_boxes';
   info: {
-    displayName: 'Project overview';
-    icon: 'play';
+    displayName: 'Simple text box';
+    icon: 'archive';
   };
   attributes: {
-    projBlurb: Schema.Attribute.Text & Schema.Attribute.Required;
-    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
-    projImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Schema.Attribute.Required;
-    projTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.Component<'basic.text', false>;
+    img: Schema.Attribute.Component<'basic.single-img', false>;
+    shortTitle: Schema.Attribute.Component<'basic.text', false>;
   };
 }
 
-export interface ProvaTextBox extends Struct.ComponentSchema {
-  collectionName: 'components_prova_text_boxes';
+export interface CoreWndWproj extends Struct.ComponentSchema {
+  collectionName: 'components_core_wnd_wprojs';
   info: {
-    displayName: 'Text box';
-    icon: 'write';
+    displayName: 'WNDWproj';
+    icon: 'command';
   };
   attributes: {
-    content: Schema.Attribute.RichText & Schema.Attribute.Required;
-    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    shortTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    blurb: Schema.Attribute.Component<'basic.text', false>;
+    handletxt: Schema.Attribute.Component<'basic.text', false>;
+    img: Schema.Attribute.Component<'basic.single-img', false>;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+    title: Schema.Attribute.Component<'basic.text', false>;
   };
 }
 
@@ -217,7 +221,6 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'basic.button-or-link-list': BasicButtonOrLinkList;
       'basic.form-field': BasicFormField;
       'basic.hero-img': BasicHeroImg;
       'basic.link-button': BasicLinkButton;
@@ -225,10 +228,11 @@ declare module '@strapi/strapi' {
       'basic.media-gallery': BasicMediaGallery;
       'basic.single-img': BasicSingleImg;
       'basic.text': BasicText;
-      'prova.category-overview': ProvaCategoryOverview;
-      'prova.list-project': ProvaListProject;
-      'prova.project-overview': ProvaProjectOverview;
-      'prova.text-box': ProvaTextBox;
+      'core.form': CoreForm;
+      'core.link-button-list': CoreLinkButtonList;
+      'core.project-list': CoreProjectList;
+      'core.simple-text-box': CoreSimpleTextBox;
+      'core.wnd-wproj': CoreWndWproj;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
