@@ -92,6 +92,9 @@ export interface BasicText extends Struct.ComponentSchema {
     rtfcontent: Schema.Attribute.RichText;
     String: Schema.Attribute.String;
     styleTag: Schema.Attribute.Enumeration<['b', 'i', 'u', 'strong']>;
+    type: Schema.Attribute.Enumeration<['string', 'content', 'rtf']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'string'>;
   };
 }
 

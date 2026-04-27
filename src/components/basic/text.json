@@ -6,14 +6,54 @@
   },
   "options": {},
   "attributes": {
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "string",
+      "enum": [
+        "string",
+        "content",
+        "rtf"
+      ]
+    },
     "String": {
-      "type": "string"
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "string"
+          ]
+        }
+      }
     },
     "Content": {
-      "type": "text"
+      "type": "text",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "content"
+          ]
+        }
+      }
     },
     "rtfcontent": {
-      "type": "richtext"
+      "type": "richtext",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "rtf"
+          ]
+        }
+      }
     },
     "HTMLTag": {
       "type": "enumeration",
