@@ -709,6 +709,13 @@ export interface ApiFrontPageFrontPage extends Struct.SingleTypeSchema {
       'api::front-page.front-page'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -890,6 +897,12 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'templates.project-overview',
       false
     > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    provaImg: Schema.Attribute.Component<'basic.single-img', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

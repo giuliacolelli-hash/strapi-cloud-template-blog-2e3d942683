@@ -89,6 +89,16 @@
       },
       "component": "basic.link-button",
       "repeatable": true
+    },
+    "provaImg": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.single-img",
+      "repeatable": false
     }
   }
 }

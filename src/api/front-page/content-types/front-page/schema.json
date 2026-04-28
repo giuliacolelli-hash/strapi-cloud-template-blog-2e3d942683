@@ -54,6 +54,15 @@
       },
       "component": "templates.basic-container",
       "repeatable": false
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
