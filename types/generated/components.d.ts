@@ -82,9 +82,7 @@ export interface BasicText extends Struct.ComponentSchema {
     icon: 'alien';
   };
   attributes: {
-    Color: Schema.Attribute.Enumeration<
-      ['primary', 'secondary', 'tertiary', 'light', 'dark']
-    >;
+    Color: Schema.Attribute.Enumeration<['minty', 'carbon', 'cherry', 'ash']>;
     Content: Schema.Attribute.Text;
     HTMLTag: Schema.Attribute.Enumeration<
       ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']

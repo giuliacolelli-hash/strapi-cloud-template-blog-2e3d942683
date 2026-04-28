@@ -79,11 +79,10 @@
     "Color": {
       "type": "enumeration",
       "enum": [
-        "primary",
-        "secondary",
-        "tertiary",
-        "light",
-        "dark"
+        "minty",
+        "carbon",
+        "cherry",
+        "ash"
       ]
     }
   },
