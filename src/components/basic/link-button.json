@@ -12,19 +12,29 @@
     },
     "type": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "link",
         "filled",
         "outline"
       ]
     },
+    "target": {
+      "type": "enumeration",
+      "required": true,
+      "default": "_self",
+      "enum": [
+        "_self",
+        "_blank"
+      ]
+    },
     "color": {
       "type": "enumeration",
       "enum": [
-        "primary",
-        "secondary",
-        "dark",
-        "light"
+        "mint",
+        "carbon",
+        "cherry",
+        "ash"
       ]
     },
     "size": {

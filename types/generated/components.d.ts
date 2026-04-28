@@ -18,12 +18,14 @@ export interface BasicLinkButton extends Struct.ComponentSchema {
     icon: 'link';
   };
   attributes: {
-    color: Schema.Attribute.Enumeration<
-      ['primary', 'secondary', 'dark', 'light']
-    >;
+    color: Schema.Attribute.Enumeration<['mint', 'carbon', 'cherry', 'ash']>;
     size: Schema.Attribute.Enumeration<['default', 'small', 'large']>;
+    target: Schema.Attribute.Enumeration<['_self', '_blank']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'_self'>;
     text: Schema.Attribute.String & Schema.Attribute.Required;
-    type: Schema.Attribute.Enumeration<['link', 'filled', 'outline']>;
+    type: Schema.Attribute.Enumeration<['link', 'filled', 'outline']> &
+      Schema.Attribute.Required;
     URL: Schema.Attribute.String;
   };
 }
