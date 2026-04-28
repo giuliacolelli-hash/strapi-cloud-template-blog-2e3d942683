@@ -7,9 +7,11 @@
   "options": {},
   "attributes": {
     "heroImg": {
-      "type": "component",
-      "component": "basic.hero-img",
-      "repeatable": false
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "title": {
       "type": "component",

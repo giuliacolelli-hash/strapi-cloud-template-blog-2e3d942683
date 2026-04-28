@@ -11,17 +11,6 @@ export interface BasicFormField extends Struct.ComponentSchema {
   };
 }
 
-export interface BasicHeroImg extends Struct.ComponentSchema {
-  collectionName: 'components_basic_hero_imgs';
-  info: {
-    displayName: 'Hero Img';
-    icon: 'expand';
-  };
-  attributes: {
-    heroimg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-  };
-}
-
 export interface BasicLinkButton extends Struct.ComponentSchema {
   collectionName: 'components_basic_link_buttons';
   info: {
@@ -87,7 +76,13 @@ export interface BasicText extends Struct.ComponentSchema {
     HTMLTag: Schema.Attribute.Enumeration<
       ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']
     >;
-    rtfcontent: Schema.Attribute.RichText;
+    rtfcontent: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     String: Schema.Attribute.String;
     styleTag: Schema.Attribute.Enumeration<['b', 'i', 'u', 'strong']>;
     type: Schema.Attribute.Enumeration<['string', 'content', 'rtf']> &
@@ -255,7 +250,7 @@ export interface TemplatesHeroSection extends Struct.ComponentSchema {
     icon: 'alien';
   };
   attributes: {
-    heroImg: Schema.Attribute.Component<'basic.hero-img', false>;
+    heroImg: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     title: Schema.Attribute.Component<'basic.text', false>;
   };
@@ -305,7 +300,6 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'basic.form-field': BasicFormField;
-      'basic.hero-img': BasicHeroImg;
       'basic.link-button': BasicLinkButton;
       'basic.logo-brand': BasicLogoBrand;
       'basic.media-gallery': BasicMediaGallery;

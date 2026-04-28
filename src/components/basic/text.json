@@ -43,7 +43,7 @@
       }
     },
     "rtfcontent": {
-      "type": "richtext",
+      "type": "customField",
       "conditions": {
         "visible": {
           "==": [
@@ -53,6 +53,10 @@
             "rtf"
           ]
         }
+      },
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
       }
     },
     "HTMLTag": {

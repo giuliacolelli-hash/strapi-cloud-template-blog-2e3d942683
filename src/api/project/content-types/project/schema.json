@@ -39,26 +39,21 @@
       "relation": "oneToMany",
       "target": "api::tag.tag"
     },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category",
-      "mappedBy": "project"
-    },
-    "heroimg": {
-      "type": "media",
+    "heroImg": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "component": "basic.single-img",
+      "repeatable": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category",
+      "mappedBy": "project"
     },
     "projOverview": {
       "type": "component",
@@ -89,16 +84,6 @@
       },
       "component": "basic.link-button",
       "repeatable": true
-    },
-    "provaImg": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "basic.single-img",
-      "repeatable": false
     }
   }
 }
