@@ -775,7 +775,9 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::header.header'>;
-    Navbar: Schema.Attribute.Component<'core.link-button-list', false> &
+    Navbar: Schema.Attribute.DynamicZone<
+      ['basic.link-button', 'core.link-button-list']
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

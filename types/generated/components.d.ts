@@ -33,7 +33,7 @@ export interface BasicLinkButton extends Struct.ComponentSchema {
 export interface BasicLogoBrand extends Struct.ComponentSchema {
   collectionName: 'components_basic_logo_brands';
   info: {
-    displayName: 'Logo-brand';
+    displayName: 'LogoBrand';
     icon: 'emotionHappy';
   };
   attributes: {
