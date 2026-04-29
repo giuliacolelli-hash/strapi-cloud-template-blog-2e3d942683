@@ -285,7 +285,7 @@ export interface TemplatesProjectOverview extends Struct.ComponentSchema {
 export interface TemplatesTextBoxes extends Struct.ComponentSchema {
   collectionName: 'components_templates_text_boxes';
   info: {
-    displayName: 'Text boxes';
+    displayName: 'SeveralTxtBxs';
     icon: 'book';
   };
   attributes: {
