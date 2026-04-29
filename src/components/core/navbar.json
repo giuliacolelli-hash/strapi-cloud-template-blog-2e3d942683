@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_core_link_button_lists",
+  "collectionName": "components_core_navbars",
   "info": {
-    "displayName": "LinkList",
-    "icon": "bulletList"
+    "displayName": "Navbar",
+    "icon": "code"
   },
   "options": {},
   "attributes": {

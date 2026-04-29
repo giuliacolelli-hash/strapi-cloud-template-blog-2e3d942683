@@ -42,16 +42,14 @@
       "repeatable": false
     },
     "Navbar": {
-      "type": "dynamiczone",
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "components": [
-        "basic.link-button",
-        "core.link-button-list"
-      ]
+      "component": "core.navbar",
+      "repeatable": false
     }
   }
 }

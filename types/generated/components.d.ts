@@ -107,8 +107,19 @@ export interface CoreForm extends Struct.ComponentSchema {
 export interface CoreLinkButtonList extends Struct.ComponentSchema {
   collectionName: 'components_core_link_button_lists';
   info: {
-    displayName: 'Link/button list';
+    displayName: 'LinkList';
     icon: 'bulletList';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'basic.link-button', true>;
+  };
+}
+
+export interface CoreNavbar extends Struct.ComponentSchema {
+  collectionName: 'components_core_navbars';
+  info: {
+    displayName: 'Navbar';
+    icon: 'code';
   };
   attributes: {
     links: Schema.Attribute.Component<'basic.link-button', true>;
@@ -309,6 +320,7 @@ declare module '@strapi/strapi' {
       'basic.text': BasicText;
       'core.form': CoreForm;
       'core.link-button-list': CoreLinkButtonList;
+      'core.navbar': CoreNavbar;
       'core.project-list': CoreProjectList;
       'core.simple-text-box': CoreSimpleTextBox;
       'core.wnd-wproj': CoreWndWproj;
