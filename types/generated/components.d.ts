@@ -140,7 +140,7 @@ export interface CoreProjectList extends Struct.ComponentSchema {
 export interface CoreSimpleTextBox extends Struct.ComponentSchema {
   collectionName: 'components_core_simple_text_boxes';
   info: {
-    displayName: 'Simple text box';
+    displayName: 'TextBox';
     icon: 'archive';
   };
   attributes: {
