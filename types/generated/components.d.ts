@@ -49,7 +49,7 @@ export interface BasicMediaGallery extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    captions: Schema.Attribute.Component<'basic.text', true>;
+    caption: Schema.Attribute.Component<'basic.text', false>;
     images: Schema.Attribute.Media<'images', true>;
   };
 }

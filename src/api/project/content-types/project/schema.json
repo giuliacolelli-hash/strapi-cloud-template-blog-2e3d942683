@@ -84,6 +84,16 @@
       },
       "component": "basic.link-button",
       "repeatable": true
+    },
+    "mediaGal": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.media-gallery",
+      "repeatable": false
     }
   }
 }

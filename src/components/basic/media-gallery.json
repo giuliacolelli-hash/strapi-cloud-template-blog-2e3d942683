@@ -13,10 +13,10 @@
         "images"
       ]
     },
-    "captions": {
+    "caption": {
       "type": "component",
       "component": "basic.text",
-      "repeatable": true
+      "repeatable": false
     }
   },
   "config": {}
