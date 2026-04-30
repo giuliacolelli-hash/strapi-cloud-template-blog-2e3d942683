@@ -128,17 +128,6 @@ export interface CoreNavbar extends Struct.ComponentSchema {
   };
 }
 
-export interface CoreProjectList extends Struct.ComponentSchema {
-  collectionName: 'components_core_project_lists';
-  info: {
-    displayName: 'Project List';
-    icon: 'check';
-  };
-  attributes: {
-    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
-  };
-}
-
 export interface CoreSimpleTextBox extends Struct.ComponentSchema {
   collectionName: 'components_core_simple_text_boxes';
   info: {
@@ -327,7 +316,6 @@ declare module '@strapi/strapi' {
       'core.form': CoreForm;
       'core.link-button-list': CoreLinkButtonList;
       'core.navbar': CoreNavbar;
-      'core.project-list': CoreProjectList;
       'core.simple-text-box': CoreSimpleTextBox;
       'core.wnd-wproj': CoreWndWproj;
       'shared.media': SharedMedia;

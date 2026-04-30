@@ -558,7 +558,6 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
-    projects: Schema.Attribute.Component<'core.project-list', false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;

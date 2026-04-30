@@ -39,11 +39,6 @@
       "type": "component",
       "component": "basic.text",
       "repeatable": false
-    },
-    "projects": {
-      "type": "component",
-      "component": "core.project-list",
-      "repeatable": false
     }
   }
 }
