@@ -94,6 +94,14 @@
       },
       "component": "basic.media-gallery",
       "repeatable": false
+    },
+    "handletxt": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
