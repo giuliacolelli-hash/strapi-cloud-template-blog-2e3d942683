@@ -225,10 +225,10 @@ export interface TemplatesBasicContainer extends Struct.ComponentSchema {
     icon: 'filter';
   };
   attributes: {
-    content: Schema.Attribute.Component<'basic.text', true>;
-    CTA: Schema.Attribute.Component<'basic.link-button', true>;
+    content: Schema.Attribute.Component<'basic.text', false>;
+    CTA: Schema.Attribute.Component<'basic.link-button', false>;
     gallery: Schema.Attribute.Component<'basic.media-gallery', false>;
-    img: Schema.Attribute.Component<'basic.single-img', true>;
+    img: Schema.Attribute.Component<'basic.single-img', false>;
     linklist: Schema.Attribute.Component<'core.link-button-list', false>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     title: Schema.Attribute.Component<'basic.text', false>;

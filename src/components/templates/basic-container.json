@@ -19,12 +19,12 @@
     "img": {
       "type": "component",
       "component": "basic.single-img",
-      "repeatable": true
+      "repeatable": false
     },
     "content": {
       "type": "component",
       "component": "basic.text",
-      "repeatable": true
+      "repeatable": false
     },
     "gallery": {
       "type": "component",
@@ -39,7 +39,7 @@
     "CTA": {
       "type": "component",
       "component": "basic.link-button",
-      "repeatable": true
+      "repeatable": false
     }
   },
   "config": {}
