@@ -25,6 +25,11 @@
       "type": "component",
       "component": "basic.link-button",
       "repeatable": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   },
   "config": {}

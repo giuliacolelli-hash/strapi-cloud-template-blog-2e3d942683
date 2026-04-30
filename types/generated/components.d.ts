@@ -307,6 +307,7 @@ export interface TemplatesWndWs extends Struct.ComponentSchema {
     icon: 'refresh';
   };
   attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     CTA: Schema.Attribute.Component<'basic.link-button', false>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     title: Schema.Attribute.Component<'basic.text', false>;

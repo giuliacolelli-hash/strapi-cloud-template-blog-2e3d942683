@@ -26,6 +26,12 @@
       "type": "component",
       "component": "templates.text-boxes",
       "repeatable": false
+    },
+    "title": {
+      "type": "uid"
+    },
+    "slug": {
+      "type": "uid"
     }
   }
 }
