@@ -73,11 +73,13 @@ export interface BasicText extends Struct.ComponentSchema {
     icon: 'alien';
   };
   attributes: {
-    Color: Schema.Attribute.Enumeration<['minty', 'carbon', 'cherry', 'ash']>;
+    Color: Schema.Attribute.Enumeration<['minty', 'carbon', 'cherry', 'ash']> &
+      Schema.Attribute.DefaultTo<'minty'>;
     Content: Schema.Attribute.Text;
     HTMLTag: Schema.Attribute.Enumeration<
       ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']
-    >;
+    > &
+      Schema.Attribute.DefaultTo<'p'>;
     rtfcontent: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
@@ -146,6 +148,7 @@ export interface CoreSimpleTextBox extends Struct.ComponentSchema {
   attributes: {
     content: Schema.Attribute.Component<'basic.text', false>;
     img: Schema.Attribute.Component<'basic.single-img', false>;
+    link: Schema.Attribute.Component<'basic.link-button', false>;
     shortTitle: Schema.Attribute.Component<'basic.text', false>;
   };
 }
@@ -160,6 +163,7 @@ export interface CoreWndWproj extends Struct.ComponentSchema {
     blurb: Schema.Attribute.Component<'basic.text', false>;
     handletxt: Schema.Attribute.Component<'basic.text', false>;
     img: Schema.Attribute.Component<'basic.single-img', false>;
+    linkProj: Schema.Attribute.Component<'basic.link-button', false>;
     project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
     title: Schema.Attribute.Component<'basic.text', false>;
   };
@@ -289,6 +293,7 @@ export interface TemplatesTextBoxes extends Struct.ComponentSchema {
     icon: 'book';
   };
   attributes: {
+    layout: Schema.Attribute.Enumeration<['row', 'l1-r2']>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     textboxes: Schema.Attribute.Component<'core.simple-text-box', true>;
     title: Schema.Attribute.Component<'basic.text', false>;

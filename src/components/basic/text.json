@@ -61,6 +61,7 @@
     },
     "HTMLTag": {
       "type": "enumeration",
+      "default": "p",
       "enum": [
         "h1",
         "h2",
@@ -82,6 +83,7 @@
     },
     "Color": {
       "type": "enumeration",
+      "default": "minty",
       "enum": [
         "minty",
         "carbon",

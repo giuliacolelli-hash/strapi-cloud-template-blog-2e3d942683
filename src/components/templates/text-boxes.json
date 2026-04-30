@@ -20,6 +20,13 @@
       "type": "component",
       "component": "core.simple-text-box",
       "repeatable": true
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "row",
+        "l1-r2"
+      ]
     }
   },
   "config": {}

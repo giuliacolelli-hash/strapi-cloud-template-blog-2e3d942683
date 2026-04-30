@@ -30,6 +30,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::project.project"
+    },
+    "linkProj": {
+      "type": "component",
+      "component": "basic.link-button",
+      "repeatable": false
     }
   },
   "config": {}

@@ -20,6 +20,11 @@
       "type": "component",
       "component": "basic.single-img",
       "repeatable": false
+    },
+    "link": {
+      "type": "component",
+      "component": "basic.link-button",
+      "repeatable": false
     }
   },
   "config": {}
