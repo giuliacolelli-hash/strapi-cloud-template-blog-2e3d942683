@@ -44,6 +44,14 @@
       },
       "component": "templates.basic-container",
       "repeatable": false
+    },
+    "title": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
