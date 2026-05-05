@@ -24,7 +24,7 @@
     "img": {
       "type": "component",
       "component": "basic.single-img",
-      "repeatable": true
+      "repeatable": false
     }
   },
   "config": {}

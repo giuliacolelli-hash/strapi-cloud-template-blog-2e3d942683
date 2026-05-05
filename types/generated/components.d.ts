@@ -243,7 +243,7 @@ export interface TemplatesFormSection extends Struct.ComponentSchema {
   };
   attributes: {
     form: Schema.Attribute.Component<'core.form', false>;
-    img: Schema.Attribute.Component<'basic.single-img', true>;
+    img: Schema.Attribute.Component<'basic.single-img', false>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     title: Schema.Attribute.Component<'basic.text', false>;
   };
