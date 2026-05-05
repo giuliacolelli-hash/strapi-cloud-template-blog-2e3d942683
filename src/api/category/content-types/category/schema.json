@@ -29,11 +29,11 @@
       "target": "api::article.article",
       "mappedBy": "category"
     },
-    "project": {
+    "projects": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::project.project",
-      "inversedBy": "category"
+      "mappedBy": "category"
     },
     "description": {
       "type": "component",
