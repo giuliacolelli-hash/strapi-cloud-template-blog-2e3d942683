@@ -912,7 +912,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    projDetails: Schema.Attribute.Component<'templates.basic-container', true> &
+    projDetails: Schema.Attribute.Component<
+      'templates.basic-container',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

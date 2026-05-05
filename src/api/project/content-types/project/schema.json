@@ -73,7 +73,7 @@
         }
       },
       "component": "templates.basic-container",
-      "repeatable": true
+      "repeatable": false
     },
     "Navigation": {
       "type": "component",
