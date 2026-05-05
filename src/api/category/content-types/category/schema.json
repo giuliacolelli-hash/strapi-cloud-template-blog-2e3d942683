@@ -39,6 +39,11 @@
       "type": "component",
       "component": "basic.text",
       "repeatable": false
+    },
+    "Navigation": {
+      "type": "component",
+      "component": "basic.link-button",
+      "repeatable": true
     }
   }
 }
