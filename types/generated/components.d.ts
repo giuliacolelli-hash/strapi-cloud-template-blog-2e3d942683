@@ -283,6 +283,7 @@ export interface TemplatesTextBoxes extends Struct.ComponentSchema {
   };
   attributes: {
     layout: Schema.Attribute.Enumeration<['row', 'l1-r2']>;
+    sfondo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     subtitle: Schema.Attribute.Component<'basic.text', false>;
     textboxes: Schema.Attribute.Component<'core.simple-text-box', true>;
     title: Schema.Attribute.Component<'basic.text', false>;

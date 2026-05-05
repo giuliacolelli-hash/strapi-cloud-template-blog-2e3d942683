@@ -27,6 +27,16 @@
         "row",
         "l1-r2"
       ]
+    },
+    "sfondo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
