@@ -11,21 +11,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Nome": {
+    "nome": {
       "type": "string",
       "required": true
     },
-    "Cognome": {
+    "cognome": {
       "type": "string"
     },
-    "Oggetto": {
-      "type": "text"
-    },
-    "Email": {
+    "email": {
       "type": "email",
       "required": true
     },
-    "Messaggio": {
+    "messaggio": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {

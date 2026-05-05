@@ -692,18 +692,18 @@ export interface ApiFormSubmissionFormSubmission
     draftAndPublish: true;
   };
   attributes: {
-    Cognome: Schema.Attribute.String;
+    cognome: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Email: Schema.Attribute.Email & Schema.Attribute.Required;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::form-submission.form-submission'
     > &
       Schema.Attribute.Private;
-    Messaggio: Schema.Attribute.RichText &
+    messaggio: Schema.Attribute.RichText &
       Schema.Attribute.Required &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
@@ -711,8 +711,7 @@ export interface ApiFormSubmissionFormSubmission
           preset: 'defaultHtml';
         }
       >;
-    Nome: Schema.Attribute.String & Schema.Attribute.Required;
-    Oggetto: Schema.Attribute.Text;
+    nome: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
